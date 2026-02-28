@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOMEN'S HELPLINE DIRECTORY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>👸🏼 RISE AND REACH</h1>
+            <p>"Your strength got you here;our support will take you further"
+            </p>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="citySearch" 
+                    placeholder="Search by city (e.g., Delhi, Mumbai)"
+                    class="search-input"
+                >
+                <select id="categoryFilter" class="search-input">
+                    <option value="">All Categories</option>
+                    <option value="Emergency">Emergency</option>
+                    <option value="Support">Support</option>
+                    <option value="Counseling">Counseling</option>
+                    <option value="Legal Aid">Legal Aid</option>
+                </select>
+                <button id="searchBtn" class="search-btn">Search</button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+        </section>
+         <button id="darkModeToggle">🌙 Dark Mode</button>
+
+        <!-- Helplines List -->
+        <section class="helplines-section">
+            <h2>Available Helplines</h2>
+            <div id="helplinesList" class="helplines-grid">
+                <p class="loading">Loading helplines...</p>
+            </div>
+        </section>
+
+        <!-- Add New Helpline Form -->
+        <section class="form-section">
+            <h2>Submit a New Helpline</h2>
+            <form id="helplineForm" class="helpline-form">
+                <div class="form-group">
+                    <label for="name">Helpline Name:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="e.g., Women Support Center"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input 
+                        type="text" 
+                        id="city" 
+                        name="city" 
+                        placeholder="e.g., Delhi"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="Support">Support</option>
+                        <option value="Counseling">Counseling</option>
+                        <option value="Legal Aid">Legal Aid</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input 
+                        type="text" 
+                        id="contact" 
+                        name="contact" 
+                        placeholder="e.g., 1091 or 9876543210"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location/Address:</label>
+                    <input 
+                        type="text" 
+                        id="location" 
+                        name="location" 
+                        placeholder="e.g., 123 Main Street, Delhi or full address"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">Add Helpline</button>
+            </form>
+            <p id="formMessage" class="form-message"></p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Women's Helpline Directory. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
