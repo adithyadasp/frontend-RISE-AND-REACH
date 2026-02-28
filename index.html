@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WOMEN'S HELPLINE DIRECTORY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -37,6 +38,14 @@
         </section>
          <button id="darkModeToggle">🌙 Dark Mode</button>
 
+        <!-- Favorites Section -->
+        <section class="favorites-section">
+            <h2>❤️ My Favorites</h2>
+            <div id="favoritesList" class="helplines-grid">
+                <p class="no-results">No favorites yet. Add some helplines to your favorites!</p>
+            </div>
+        </section>
+
         <!-- Helplines List -->
         <section class="helplines-section">
             <h2>Available Helplines</h2>
@@ -44,6 +53,59 @@
                 <p class="loading">Loading helplines...</p>
             </div>
         </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <h2>⭐ Ratings & Reviews</h2>
+            <div id="reviewsContainer">
+                <p class="no-results">Select a helpline to view reviews</p>
+            </div>
+        </section>
+
+        <!-- Review Modal -->
+        <div id="reviewModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeReviewModal()">&times;</span>
+                <h3>Add Your Review</h3>
+                <form id="reviewForm" class="review-form">
+                    <div class="form-group">
+                        <label for="reviewName">Your Name (Optional):</label>
+                        <input 
+                            type="text" 
+                            id="reviewName" 
+                            name="reviewName" 
+                            placeholder="Enter your name or leave blank for Anonymous"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewRating">Rating:</label>
+                        <div class="star-rating" id="starRating">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="reviewRating" name="reviewRating" value="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewComment">Your Review:</label>
+                        <textarea 
+                            id="reviewComment" 
+                            name="reviewComment" 
+                            placeholder="Share your experience with this helpline..."
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Review</button>
+                </form>
+                <p id="reviewMessage" class="form-message"></p>
+            </div>
+        </div>
 
         <!-- Add New Helpline Form -->
         <section class="form-section">

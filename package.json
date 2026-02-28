@@ -1,24 +1,16 @@
 {
-  "name": "prjoect",
+  "name": "womens-helpline-frontend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Frontend for Women's Helpline Directory",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx http-server -p 8000 -c-1"
   },
-  "keywords": [],
+  "keywords": ["helpline", "women"],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "body-parser": "^2.2.2",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "fs": "^0.0.1-security",
-    "jsonwebtoken": "^9.0.3",
-    "multer": "^2.1.0",
-    "mysql2": "^3.18.2",
-    "sequelize": "^6.37.7"
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.0"
   }
 }
