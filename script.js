@@ -1,8 +1,5 @@
 // Determine API URL based on environment
-const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
-const API_BASE_URL = isProduction 
-  ? 'https://backend-wtkt.onrender.com'
-  : 'http://localhost:5000/api';
+const API_BASE_URL =  'https://backend-wtkt.onrender.com'
 
 const API_URL = `${API_BASE_URL}/helplines`;
 const REVIEWS_API_URL = `${API_BASE_URL}/reviews`;
